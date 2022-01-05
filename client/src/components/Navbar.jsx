@@ -20,22 +20,15 @@ const Navbar = () => {
         <img
           src={ cookie1 }
           alt='logo'
-          className='w-32 cursor-pointer'
-          style={ {
-            backgroundColor: '#FFF',
-            borderRadius: '60px',
-            padding: '5px',
-            height: 'auto',
-            width: '5vw',
-          } }
+          className='w-[4vw] cursor-pointer bg-cyan-300 rounded-full backdrop-hue-rotate-90 p-1'
         />
-        <h1 className='text-4xl text-white'>Crypto Cookie</h1>
+        <h1 className='text-4xl text-cyan-300'>Crypto Cookie</h1>
       </div>
       <ul className='text-white text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         { [ 'Market', 'Exchange', 'Tutorials', 'Wallets' ].map( ( item, index ) => (
           <NavbarItem key={ item + index } title={ item } />
         ) ) }
-        <li className='bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]'>
+        <li className='bg-cyan-300 py-1 px-6 mx-4 rounded-full cursor-pointer hover:bg-cyan-500'>
           Login
         </li>
       </ul>
@@ -46,7 +39,7 @@ const Navbar = () => {
         }
         { toggleMenu && (
           <ul
-            className='z-10 fixed top-0 -gitright-2
+            className='z-10 fixed top-0 -right-2
           p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'
           >
             <li className='text-xl w-full my-2'>
