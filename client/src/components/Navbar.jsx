@@ -20,9 +20,9 @@ const Navbar = () => {
         <img
           src={ cookie1 }
           alt='logo'
-          className='w-[4vw] cursor-pointer bg-cyan-300 rounded-full backdrop-hue-rotate-90 p-1'
+          className='w-[4vw] cursor-pointer bg-cyan-300 rounded-full p-1'
         />
-        <h1 className='text-4xl text-cyan-300'>Crypto Cookie</h1>
+        <h1 className='text-4xl text-gradient'>Crypto Cookie</h1>
       </div>
       <ul className='text-white text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         { [ 'Market', 'Exchange', 'Tutorials', 'Wallets' ].map( ( item, index ) => (
