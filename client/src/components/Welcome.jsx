@@ -4,6 +4,7 @@ import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
 import { Loader } from './'
 import { TransactionContext } from '../context/TransactionContext'
+import { shortenAddress } from '../utils/shortenAddress'
 
 const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white'
 
@@ -39,7 +40,7 @@ const Welcome = () => {
           <h1 className='text-3xl sm:text-5xl text-white text-gradient py-1'>
             Send Crypto <br /> across the world
           </h1>
-          <p className='text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base'>
+          <p className='text-left mt-5 text-white text-gradient font-light md:w-9/12 w-11/12 text-base'>
             Explore the crypto world. Buy and sell cryptocurrencies on Crypto Cookie.
           </p>
           { !currentAccount && (
@@ -51,7 +52,7 @@ const Welcome = () => {
               <p className='text-white text-base font-semibold'>Connect Wallet</p>
             </button>
           ) }
-          <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10'>
+          <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10 text-gradient'>
             <div className={ `rounded-tl-2xl ${commonStyles}` }>
               Reliability
             </div>
@@ -79,7 +80,7 @@ const Welcome = () => {
               </div>
               <div>
                 <p className='text-white font-light text-sm'>
-                  Address
+                  { shortenAddress( currentAccount ) }
                 </p>
                 <p className='text-white font-semibold text-lg mt-1'>
                   Ethereum
