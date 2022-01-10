@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
-import { Loader } from './'
+import { Loader } from '.'
 import { TransactionContext } from '../context/TransactionContext'
 import { shortenAddress } from '../utils/shortenAddress'
 
@@ -20,7 +20,7 @@ const Input = ( { placeholder, name, type, value, handleChange } ) => (
 )
 
 const Welcome = () => {
-  const { connectWallet, currentAccount, formData, sendTransaction, handleChange } = useContext( TransactionContext )
+  const { connectWallet, currentAccount, formData, sendTransaction, handleChange, isLoading } = useContext( TransactionContext )
 
 
   const handleSubmit = ( e ) => {
@@ -49,6 +49,7 @@ const Welcome = () => {
               onClick={ connectWallet }
               className='flex flex-row justify-center items-center my-5 bg-cyan-300 p-3 rounded-full cursor-pointer hover:bg-cyan-500'
             >
+              <AiFillPlayCircle className='text-white mr-2' />
               <p className='text-white text-base font-semibold'>Connect Wallet</p>
             </button>
           ) }
@@ -110,7 +111,7 @@ const Welcome = () => {
               type='text'
               handleChange={ handleChange } />
             <div className='h-[1px] w-full bg-cyan-500 my-2' />
-            { false ? (
+            { isLoading ? (
               <Loader />
             ) : (
               <button

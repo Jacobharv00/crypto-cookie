@@ -31,7 +31,7 @@ const Footer = () => {
           cryptocookie@gmail.com
         </p>
       </div>
-      <div className='sm:w-[90%] w-full h-[0.25px] bg-grey-400 mt-5' />
+      <div className='sm:w-[90%] w-full h-[0.25px] bg-cyan-700 mt-5' />
       <div className='sm:w-[90%] w-full flex justify-between items-center mt-3'>
         <p className='text-gradient text-sm text-center'>
           @cryptocookie2022
