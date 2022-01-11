@@ -1,11 +1,11 @@
 import { useEffect, useState, createContext } from 'react'
 import { ethers } from 'ethers'
-
 import { contractABI, contractAddress } from '../utils/constants'
 
 export const TransactionContext = createContext()
 
 const { ethereum } = window
+
 
 const getEthereumContract = () => {
   const provider = new ethers.providers.Web3Provider( ethereum )
@@ -34,23 +34,20 @@ export const TransactionProvider = ( { children } ) => {
 
   const getAllTransactions = async () => {
     try {
-      if ( ethereum ) {
-        const transactionsContract = getEthereumContract()
+      if ( !ethereum ) return alert( 'Please install metamask' )
+      const transactionsContract = getEthereumContract()
+      const availableTransactions = await transactionsContract.getAllTransactions()
 
-        const availableTransactions = await transactionsContract.getAllTransactions()
+      const structuredTransactions = availableTransactions.map( transaction => ( {
+        addressTo: transaction.receiver,
+        addressFrom: transaction.sender,
+        timestamp: new Date( transaction.timestamp.toNumber() * 1000 ).toLocaleString(),
+        message: transaction.message,
+        keyword: transaction.keyword,
+        amount: parseInt( transaction.amount._hex ) / ( 10 ** 18 )
+      } ) )
 
-        const structuredTransactions = availableTransactions.map( transaction => ( {
-          addressTo: transaction.receiver,
-          addressFrom: transaction.sender,
-          timestamp: new Date( transaction.timestamp.toNumber() * 1000 ).toLocaleString(),
-          message: transaction.message,
-          keyword: transaction.keyword,
-          amount: parseInt( transaction.amount._hex ) / ( 10 ** 18 )
-        } ) )
-        setTransactions( structuredTransactions )
-      } else {
-        console.log( "Ethereum is not present" )
-      }
+      setTransactions( structuredTransactions )
     } catch ( error ) {
       console.log( error )
     }
@@ -78,8 +75,7 @@ export const TransactionProvider = ( { children } ) => {
       if ( ethereum ) {
         const transactionContract = getEthereumContract()
         const transactionCount = await transactionContract.getTransactionCount()
-        window.localStorage.setItem( 'transactionCount', transactionCount )
-        console.log( 'Working??' )
+        window.localStorage.setItem( "transactionCount", transactionCount )
       }
     } catch ( error ) {
       console.log( error )
@@ -103,7 +99,7 @@ export const TransactionProvider = ( { children } ) => {
     try {
       if ( ethereum ) {
         const { addressTo, amount, keyword, message } = formData
-        const transactionContract = createEthereumContract()
+        const transactionContract = getEthereumContract()
         const parsedAmount = ethers.utils.parseEther( amount )
 
         await ethereum.request( {
@@ -124,9 +120,10 @@ export const TransactionProvider = ( { children } ) => {
         console.log( `Success - ${transactionHash.hash}` )
         setIsLoading( false )
 
-        const transactionsCount = await transactionContract.getTransactionCount()
+        const transactionCount = await transactionContract.getTransactionCount()
 
-        setTransactionCount( transactionsCount.toNumber() )
+        setTransactionCount( transactionCount.toNumber() )
+        window.reload()
       } else {
         console.log( "No ethereum object" )
       }
@@ -147,12 +144,12 @@ export const TransactionProvider = ( { children } ) => {
       value={ {
         transactionCount,
         connectWallet,
-        transactions,
         currentAccount,
-        isLoading,
         sendTransaction,
         handleChange,
         formData,
+        transactions,
+        isLoading
       } }
     >
       { children }

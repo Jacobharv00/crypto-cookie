@@ -5,18 +5,11 @@ import { shortenAddress } from '../utils/shortenAddress'
 import useFetch from '../hooks/useFetch'
 
 const TransactionCard = ( { addressTo, addressFrom, timestamp, message, keyword, amount, url } ) => {
-
   const gifUrl = useFetch( { keyword } )
 
-
   return (
-    <div className='bg-[#181918] m-4 flex flex-1
-    2xl:min-w[450px] 
-    2xl:max-w[500px]
-    2sm:min-w[270px] 
-    2sm:max-w[300px]
-    flex-col p-3 rounded-md hover:shadow-2xl
-    '>
+    <div className='bg-[#181918] m-4 flex flex-1 2xl:min-w[450px] 2xl:max-w[500px]
+      2sm:min-w[270px] 2sm:max-w[300px] flex-col p-3 rounded-md hover:shadow-2xl'>
       <div className='flex flex-col items-center w-full mt-3'>
         <div className='w-full mb-6 p-2'>
           <a href={ `https://ropsten.etherscan.io/address/${addressFrom}` }
@@ -63,7 +56,7 @@ const TransactionCard = ( { addressTo, addressFrom, timestamp, message, keyword,
 }
 
 const Transactions = () => {
-  const { currentAccount, transactions } = useContext( TransactionContext )
+  const { transactions, currentAccount } = useContext( TransactionContext )
 
   return (
     <div className='flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions'>
@@ -78,7 +71,7 @@ const Transactions = () => {
           </h3>
         ) }
         <div className='flex flex-wrap justify-center items-center mt-10'>
-          { [ ...transactions ].reverse().map( ( transaction, index ) => (
+          { transactions.map( ( transaction, index ) => (
             <TransactionCard key={ index } { ...transaction } />
           ) ) }
         </div>
@@ -88,3 +81,7 @@ const Transactions = () => {
 }
 
 export default Transactions
+
+// Account 1 => 0x6029846db21155ac9410e34470987deE9217A3Ea
+// Account 2 => 0x3Ac3aa752b7D012eF97a2C820AA327f98388553e
+// Account 3 => 0xf5B0775e10887df02674e0625aF651f8365532Dc
