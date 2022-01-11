@@ -82,6 +82,3 @@ const Transactions = () => {
 
 export default Transactions
 
-// Account 1 => 0x6029846db21155ac9410e34470987deE9217A3Ea
-// Account 2 => 0x3Ac3aa752b7D012eF97a2C820AA327f98388553e
-// Account 3 => 0xf5B0775e10887df02674e0625aF651f8365532Dc
