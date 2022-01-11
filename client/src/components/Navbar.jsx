@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const NavbarItem = ( { title, classProps } ) => {
   return (
-    <li className={ `mx-4 cursor-pointer ${classProps}` }>
+    <li className={ `mx-4 cursor-pointer text-gradient ${classProps}` }>
       { title }
     </li>
   )
@@ -20,17 +20,14 @@ const Navbar = () => {
         <img
           src={ cookie1 }
           alt='logo'
-          className='w-[4vw] cursor-pointer bg-cyan-300 rounded-full p-1'
+          className='w-[4vw] cursor-pointer bg-[#8A4285] rounded-full p-1'
         />
         <h1 className='text-4xl text-gradient'>Crypto Cookie</h1>
       </div>
-      <ul className='text-white text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
+      <ul className='text-black text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         { [ 'Market', 'Exchange', 'Tutorials', 'Wallets' ].map( ( item, index ) => (
           <NavbarItem key={ item + index } title={ item } />
         ) ) }
-        <li className='bg-cyan-300 py-1 px-6 mx-4 rounded-full cursor-pointer hover:bg-cyan-500'>
-          Login
-        </li>
       </ul>
       <div className='flex relative'>
         { toggleMenu
@@ -40,7 +37,7 @@ const Navbar = () => {
         { toggleMenu && (
           <ul
             className='z-10 fixed top-0 -right-2
-          p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'
+          p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md purple-glassmorphism text-rose-200 animate-slide-in'
           >
             <li className='text-xl w-full my-2'>
               <AiOutlineClose onClick={ () => setToggleMenu( false ) } />
