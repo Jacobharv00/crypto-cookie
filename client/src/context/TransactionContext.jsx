@@ -6,7 +6,6 @@ export const TransactionContext = createContext()
 
 const { ethereum } = window
 
-
 const getEthereumContract = () => {
   const provider = new ethers.providers.Web3Provider( ethereum )
   const signer = provider.getSigner()
@@ -123,7 +122,7 @@ export const TransactionProvider = ( { children } ) => {
         const transactionCount = await transactionContract.getTransactionCount()
 
         setTransactionCount( transactionCount.toNumber() )
-        window.reload()
+        window.location.reload()
       } else {
         console.log( "No ethereum object" )
       }
