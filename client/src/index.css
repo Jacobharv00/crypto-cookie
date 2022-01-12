@@ -1,5 +1,5 @@
 /* FONT */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
 
 * html {
   padding: 0;
@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Playfair Display SC', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -72,10 +72,11 @@ border: 1px solid #0f0e13;
 }
 
 .eth-card {
-  background-image:#000;
+  background-image:#FFF;
   background-image: 
   radial-gradient(at 21% 26%, rgb(36, 144, 165) 0, transparent 55%),  
-  radial-gradient(at 88% 31%, rgb(0, 0, 0) 0, transparent 50%);
+  radial-gradient(at 88% 31%, rgb(0, 0, 0) 0, transparent 50%),
+  radial-gradient(at 88% 31%, rgb(156, 232, 249) 0, transparent 50%);
 }
 
 .text-gradient {
