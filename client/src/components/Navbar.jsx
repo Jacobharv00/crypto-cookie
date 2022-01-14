@@ -20,7 +20,7 @@ const Navbar = () => {
         <img
           src={ cookie1 }
           alt='logo'
-          className='w-[4vw] cursor-pointer bg-[#8A4285] rounded-full p-1'
+          className='w-[4vw] cursor-pointer bg-[#8A4285] rounded-full p-1 hover:bg-cyan-300'
         />
         <h1 className='text-4xl text-gradient'>Crypto Cookie</h1>
       </div>

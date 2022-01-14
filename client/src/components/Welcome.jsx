@@ -6,7 +6,7 @@ import { Loader } from '.'
 import { TransactionContext } from '../context/TransactionContext'
 import { shortenAddress } from '../utils/shortenAddress'
 
-const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white'
+const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-[#C7E5E3] text-sm font-bold'
 
 const Input = ( { placeholder, name, type, value, handleChange } ) => (
   <input
@@ -71,7 +71,7 @@ const Welcome = () => {
           </div>
         </div>
         <div className='flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10'>
-          <div className='p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism border-1 border-[#FFF]'>
+          <div className='p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism border-1 border-[#C7E5E3]'>
             <div className='flex justify-between flex-col w-full h-full'>
               <div className='flex justify-between items-start'>
                 <div className='w-10 h-10 rounded-full border-2 border-[#8A4285] flex justify-center items-center'>
@@ -89,7 +89,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className='p-5 sm:w-96 w-full flex flex-col justify-start items-center purple-glassmorphism border-4 border-[#311F33]'>
+          <div className='p-5 sm:w-96 w-full flex flex-col justify-start items-center purple-glassmorphism border-1 border-[#C7E5E3]'>
             <Input
               placeholder='Address To'
               name='addressTo'
