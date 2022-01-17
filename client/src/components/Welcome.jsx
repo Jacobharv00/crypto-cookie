@@ -38,10 +38,10 @@ const Welcome = () => {
       <div className='flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4'>
         <div className='flex flex-1 justify-start flex-col mf:mr-10'>
           <h1 className='text-3xl sm:text-5xl text-white text-gradient py-1'>
-            Send Crypto <br /> across the world
+            Send Crypto <br /> anywhere in the world
           </h1>
           <p className='text-left mt-5 text-white text-gradient font-light md:w-9/12 w-11/12 text-base'>
-            Explore the crypto world. Buy and sell cryptocurrencies on Crypto Cookie.
+            Buy and sell cryptocurrencies on Crypto Cookie.
           </p>
           { !currentAccount && (
             <button
@@ -55,18 +55,18 @@ const Welcome = () => {
           ) }
           <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10 text-gradient'>
             <div className={ `rounded-tl-2xl ${commonStyles}` }>
+              Ethereum
+            </div>
+            <div className={ commonStyles }>Blockchain</div>
+            <div className={ `rounded-tr-2xl ${commonStyles} ` }>
+              Web 3.0
+            </div>
+            <div className={ `rounded-bl-2xl ${commonStyles}` }>
               Reliability
             </div>
             <div className={ commonStyles }>Security</div>
-            <div className={ `rounded-tr-2xl ${commonStyles} ` }>
-              Ethereum
-            </div>
-            <div className={ `rounded-bl-2xl ${commonStyles}` }>
-              Web 3.0
-            </div>
-            <div className={ commonStyles }>Low Fees</div>
             <div className={ `rounded-br-2xl ${commonStyles}` }>
-              Blockchain
+              Low Fees
             </div>
           </div>
         </div>
@@ -74,10 +74,10 @@ const Welcome = () => {
           <div className='p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism border-1 border-[#C7E5E3]'>
             <div className='flex justify-between flex-col w-full h-full'>
               <div className='flex justify-between items-start'>
-                <div className='w-10 h-10 rounded-full border-2 border-[#8A4285] flex justify-center items-center'>
+                <div className='w-10 h-10 rounded-full border-2 border-[#C7E5E3] flex justify-center items-center'>
                   <SiEthereum fontSize={ 21 } color='#8A4285' />
                 </div>
-                <BsInfoCircle fontSize={ 17 } color='#8A4285' />
+                <BsInfoCircle fontSize={ 17 } color='#C7E5E3' />
               </div>
               <div>
                 <p className='text-gradient text-sm'>
@@ -115,7 +115,7 @@ const Welcome = () => {
               <button
                 type='button'
                 onClick={ handleSubmit }
-                className='text-rose-700 w-full mt-2 border-[1px] p-2 border-[#311F33] rounded-full cursor-pointer hover:bg-rose-200'
+                className='text-rose-700 font-bold w-full mt-2 border-[1px] p-2 border-[#311F33] rounded-full cursor-pointer hover:bg-rose-200'
               > Send Now
               </button>
             }

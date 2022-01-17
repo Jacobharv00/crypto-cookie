@@ -1,15 +1,15 @@
-import { BsShieldFillCheck } from 'react-icons/bs'
-import { BiSearchAlt } from 'react-icons/bi'
-import { RiHeart2Fill } from 'react-icons/ri'
+import { BsShieldLockFill } from 'react-icons/bs'
+import { RiExchangeFill } from 'react-icons/ri'
+import { RiTimerFlashFill } from 'react-icons/ri'
 
 const ServiceCard = ( { color, title, icon, subtitle } ) => (
-  <div className='flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer border-2 border-[#311F33] hover:shadow-xl'>
+  <div className='flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer border-2 border-[#311F33] hover:shadow-2xl'>
     <div className={ `w-10 h-10 rounded-full flex justify-center items-center ${color}` }>
       { icon }
     </div>
     <div className='ml-5 flex flex-col flex-1'>
       <h3 className='mt-2 text-gradient text-lg'>{ title }</h3>
-      <p className='mt-2 text-gradient text-sm md:w-9/12'>{ subtitle }</p>
+      <p className='mt-2 text-[#C7E5E3] font-bold text-sm md:w-9/12'>{ subtitle }</p>
     </div>
   </div>
 )
@@ -26,22 +26,22 @@ const Services = () => {
         </div>
         <div className='flex-1 flex flex-col justify-start items-center'>
           <ServiceCard
-            color='bg-[#2952E3]'
+            color='bg-[#4E80A6]'
             title='Security Guaranteed'
-            icon={ <BsShieldFillCheck fontSize={ 21 } className='text-white' /> }
-            subtitle='Security is guaranteed. We always maintain privacy and maintaining the quality of our products. '
+            icon={ <BsShieldLockFill fontSize={ 21 } className='text-white' /> }
+            subtitle='We guarantee your security when using Crypto Cookie. We always maintain privacy and the quality of our products daily.'
           />
           <ServiceCard
-            color='bg-[#8945F8]'
+            color='bg-[#B15980]'
             title='Best exchange rates'
-            icon={ <BiSearchAlt fontSize={ 21 } className='text-white' /> }
-            subtitle='Security is guaranteed. We always maintain privacy and maintaining the quality of our products. '
+            icon={ <RiExchangeFill fontSize={ 25 } className='text-white' /> }
+            subtitle='Crypto Cookie has the lowest exchange rates in the biz. If not email us and we will get you there.'
           />
           <ServiceCard
-            color='bg-[#F84550]'
+            color='bg-[#E15514]'
             title='Fastest transactions'
-            icon={ <RiHeart2Fill fontSize={ 21 } className='text-white' /> }
-            subtitle='Security is guaranteed. We always maintain privacy and maintaining the quality of our products. '
+            icon={ <RiTimerFlashFill fontSize={ 25 } className='text-white' /> }
+            subtitle='No one has time for slow transactions! Trade with Crypto Cookie for the fastest transaction speeds around.'
           />
         </div>
       </div>

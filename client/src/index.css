@@ -72,16 +72,17 @@ border: 1px solid #0f0e13;
 }
 
 .eth-card {
-  background-image:#FFF;
+  background-image:#C7E5E3;
   background-image: 
-  radial-gradient(at 21% 26%, rgb(36, 144, 165) 0, transparent 55%),  
-  radial-gradient(at 88% 31%, rgb(0, 0, 0) 0, transparent 50%),
-  radial-gradient(at 88% 31%, rgb(156, 232, 249) 0, transparent 50%);
+  radial-gradient(at 130% 90%, rgb(93, 235, 255) 0, transparent 55%),
+  radial-gradient(at 40% 20%, rgb(93, 225, 255) 0, transparent 55%),  
+  radial-gradient(at 80% 40%, #8A4285 0, transparent 60%),
+  radial-gradient(at 10% 90%, rgb(93, 225, 255) 0, transparent 45%);
 }
 
 .text-gradient {
-  background-color: #000;
-  background-image: linear-gradient(0deg, #8A4285 10%, #ff006a 45%);
+  background-color: #FFF;
+  background-image: linear-gradient(0deg, #8A4285 5%, #ff006a 45%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -9,27 +9,27 @@ const Footer = () => {
           <h3 className='text-3xl pl-2 mt-4 text-gradient'>Crypto Cookie</h3>
         </div>
         <div className='flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full'>
-          <p className='text-gradient text-base text-center mx-2 cursor-pointer'>
+          <a href='https://www.google.com/finance/quote/ETH-USD?sa=X&ved=2ahUKEwjUgpSUwLn1AhULP30KHT-PCcwQ-fUHegQIKRAS&window=6M' target='_blank' className='text-gradient text-base text-center mx-2 cursor-pointer hover:text-xl transition-all'>
             Market
-          </p>
-          <p className='text-gradient text-base text-center mx-2 cursor-pointer'>
+          </a>
+          <a href='https://fx-rate.net/ETH/USD/' target='_blank' className='text-gradient text-base text-center mx-2 cursor-pointer hover:text-xl transition-all'>
             Exchange
-          </p>
-          <p className='text-gradient text-base text-center mx-2 cursor-pointer'>
+          </a>
+          <a href='https://ethereum.org/en/developers/tutorials/' target='_blank' className='text-gradient text-base text-center mx-2 cursor-pointer hover:text-xl transition-all'>
             Tutorials
-          </p>
-          <p className='text-gradient text-base text-center mx-2 cursor-pointer'>
+          </a>
+          <a href='https://metamask.io/' target='_blank' className='text-gradient text-base text-center mx-2 cursor-pointer hover:text-xl transition-all'>
             Wallets
-          </p>
+          </a>
         </div>
       </div>
       <div className='flex justify-center items-center flex-col mt-5'>
         <p className='text-gradient text-sm text-center font-bold'>
           Come Join Us
         </p>
-        <p className='text-gradient text-sm text-center font-bold'>
+        <a href='mailto:cryptocookie@gmail.com' className='text-gradient text-sm text-center font-bold hover:text-xl transition-all'>
           cryptocookie@gmail.com
-        </p>
+        </a>
       </div>
       <div className='sm:w-[90%] w-full h-[0.25px] bg-cyan-700 mt-5' />
       <div className='sm:w-[90%] w-full flex justify-between items-center mt-3'>

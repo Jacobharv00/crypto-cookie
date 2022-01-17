@@ -3,10 +3,10 @@ import { AiOutlineClose } from 'react-icons/ai'
 import cookie1 from '../../images/cookie1.png'
 import { useState } from 'react'
 
-const NavbarItem = ( { title, classProps } ) => {
+const NavbarItem = ( { title, classProps, link } ) => {
   return (
     <li className={ `mx-4 cursor-pointer text-gradient ${classProps}` }>
-      { title }
+      <a className='hover:text-3xl transition-all' href={ link } target='_blank'>{ title }</a>
     </li>
   )
 }
@@ -25,9 +25,10 @@ const Navbar = () => {
         <h1 className='text-4xl text-gradient'>Crypto Cookie</h1>
       </div>
       <ul className='text-black text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
-        { [ 'Market', 'Exchange', 'Tutorials', 'Wallets' ].map( ( item, index ) => (
-          <NavbarItem key={ item + index } title={ item } />
-        ) ) }
+        <NavbarItem title='Market' link='https://www.google.com/finance/quote/ETH-USD?sa=X&ved=2ahUKEwjUgpSUwLn1AhULP30KHT-PCcwQ-fUHegQIKRAS&window=6M' />
+        <NavbarItem title='Exchange' link='https://fx-rate.net/ETH/USD/' />
+        <NavbarItem title='Tutorials' link='https://ethereum.org/en/developers/tutorials/' />
+        <NavbarItem title='Wallets' link='https://metamask.io/' />
       </ul>
       <div className='flex relative'>
         { toggleMenu
@@ -42,13 +43,10 @@ const Navbar = () => {
             <li className='text-xl w-full my-2'>
               <AiOutlineClose onClick={ () => setToggleMenu( false ) } />
             </li>
-            { [ 'Market', 'Exchange', 'Tutorials', 'Wallets' ].map( ( item, index ) => (
-              <NavbarItem
-                key={ item + index }
-                title={ item }
-                classProps='my-2 text-lg'
-              />
-            ) ) }
+            <NavbarItem title='Market' link='https://www.google.com/finance/quote/ETH-USD?sa=X&ved=2ahUKEwjUgpSUwLn1AhULP30KHT-PCcwQ-fUHegQIKRAS&window=6M' classProps='my-2 text-lg font-bold' />
+            <NavbarItem title='Exchange' link='https://fx-rate.net/ETH/USD/' classProps='my-2 text-lg font-bold' />
+            <NavbarItem title='Tutorials' link='https://ethereum.org/en/developers/tutorials/' classProps='my-2 text-lg font-bold' />
+            <NavbarItem title='Wallets' link='https://metamask.io/' classProps='my-2 text-lg font-bold' />
           </ul>
         ) }
       </div>
