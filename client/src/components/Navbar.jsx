@@ -20,9 +20,9 @@ const Navbar = () => {
         <img
           src={ cookie1 }
           alt='logo'
-          className='w-[4vw] cursor-pointer bg-[#8A4285] rounded-full p-1 hover:bg-cyan-300'
+          className='w-[4vw] cursor-pointer bg-[#8A4285] rounded-full p-1 hover:bg-cyan-300 hover:animate-spin'
         />
-        <h1 className='text-4xl text-gradient'>Crypto Cookie</h1>
+        <h1 className='text-4xl text-gradient hover:animate-pulse'>Crypto Cookie</h1>
       </div>
       <ul className='text-black text-2xl md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         <NavbarItem title='Market' link='https://www.google.com/finance/quote/ETH-USD?sa=X&ved=2ahUKEwjUgpSUwLn1AhULP30KHT-PCcwQ-fUHegQIKRAS&window=6M' />

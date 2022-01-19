@@ -3,7 +3,7 @@ import { RiExchangeFill } from 'react-icons/ri'
 import { RiTimerFlashFill } from 'react-icons/ri'
 
 const ServiceCard = ( { color, title, icon, subtitle } ) => (
-  <div className='flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer border-2 border-[#311F33] hover:shadow-2xl'>
+  <div className='flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer border-2 border-[#311F33] hover:animate-pulse'>
     <div className={ `w-10 h-10 rounded-full flex justify-center items-center ${color}` }>
       { icon }
     </div>

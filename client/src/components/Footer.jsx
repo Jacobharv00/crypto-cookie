@@ -5,8 +5,8 @@ const Footer = () => {
     <div className='w-full flex md:justify-center justify-between items-center flex-col p-4 gradient-bg-footer'>
       <div className='w-full flex sm:flex-row flex-col justify-between items-center my-4'>
         <div className='flex flex-[0.5] justify-center items-center'>
-          <img src={ cookie } alt='logo' className='w-[3vw] bg-[#8A4285] rounded-full p-1 hover:bg-cyan-300' />
-          <h3 className='text-3xl pl-2 mt-4 text-gradient'>Crypto Cookie</h3>
+          <img src={ cookie } alt='logo' className='w-[3vw] bg-[#8A4285] rounded-full p-1 hover:bg-cyan-300 hover:animate-spin' />
+          <h3 className='text-3xl pl-2 mt-4 text-gradient hover:animate-pulse'>Crypto Cookie</h3>
         </div>
         <div className='flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full'>
           <a href='https://www.google.com/finance/quote/ETH-USD?sa=X&ved=2ahUKEwjUgpSUwLn1AhULP30KHT-PCcwQ-fUHegQIKRAS&window=6M' target='_blank' className='text-gradient text-base text-center mx-2 cursor-pointer hover:text-xl transition-all'>
