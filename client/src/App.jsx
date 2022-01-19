@@ -1,5 +1,4 @@
 import { Navbar, Welcome, Footer, Services, Transactions } from './components'
-import { Parallax } from 'react-scroll-parallax'
 
 const App = () => {
 

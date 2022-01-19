@@ -41,7 +41,7 @@ const Welcome = () => {
             Send Crypto <br /> anywhere in the world
           </h1>
           <p className='text-left mt-5 text-white text-gradient font-light md:w-9/12 w-11/12 text-base'>
-            Buy and sell cryptocurrencies on Crypto Cookie.
+            Buy and sell cryptocurrencies on Crypto Cookie
           </p>
           { !currentAccount && (
             <button
@@ -115,7 +115,7 @@ const Welcome = () => {
               <button
                 type='button'
                 onClick={ handleSubmit }
-                className='text-rose-700 font-bold w-full mt-2 border-[1px] p-2 border-[#311F33] rounded-full cursor-pointer hover:bg-rose-200'
+                className='text-rose-700 font-bold w-full mt-2 border-[1px] p-2 border-[#311F33] rounded-full cursor-pointer hover:bg-[#6D4A5D] hover:text-[#49C247]'
               > Send Now
               </button>
             }
