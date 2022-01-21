@@ -1,7 +1,8 @@
 <h1 align="center">👋 Welcome to Crypto Cookie 👋</h1>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/MagSgolK3ScWvtHAB4/giphy.gif" alt="ethereum symbol"/>
+  <img height="325vh" src="https://media.giphy.com/media/MagSgolK3ScWvtHAB4/giphy.gif" alt="ethereum symbol"/>
+  <img height="325vh" src="https://media.giphy.com/media/Y3YHBaS9XILrruDqcn/giphy.gif" alt="cookies" />
 </p>
 
 > Want to trade crypto currencies? Crypto Cookie is a Web 3.0 application for crypto currency trading with ethereum. This site is safe and uses Solidity to handle a smart contract and each user can connect to their ownmetamask wallet within seconds. Right now this application is only set up to trade ethereum through the ropsten test network. No real ethereum is needed to trade on this site but this application could be converted into a real ethereum trading platform.
